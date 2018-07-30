@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+<h1>Search Results</h1>
+
+<form action="/search" method="GET">
+    <legend>Search for the album</legend>
+    <input type="text" placeholder="Search..." name="query">
+</form>
+
+<p th:text="'Results for ' + ${query}"></p>
+<img th:src="${src}" />
+<br>
+<a href="/">Go Back!</a>
+</body>
+
+
+
+
+</html>
